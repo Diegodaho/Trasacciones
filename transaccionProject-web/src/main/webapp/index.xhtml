@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form id="formulario1">
+
+            <p:growl id="growl1" showDetail="true"></p:growl>
+            <p:panel id="panelClase" style="text-align: center">
+                <h3>Transacciones</h3>
+                <h:panelGrid columns="4" cellpadding="10" style="text-align: center">
+                    <h4>Nombre Articulo</h4>
+                    <p:inputText  value="#{inicioControlador.nombreArticulo}" />
+
+
+                    <h4>Costo Articulo</h4>
+                    <p:inputText  value="#{inicioControlador.costoArticulo}" />
+
+                    <h4>Nombre Proveedor</h4>
+                    <p:inputText   value="#{inicioControlador.nombreProveedor}" />
+
+                    <h4>Descripcion Proveedor</h4>
+                    <p:inputText   value="#{inicioControlador.descripcionProveedor}" />
+
+                    <h4>Nombre Vendedor</h4>
+                    <p:inputText  value="#{inicioControlador.nombreVendedor}" />
+
+                    <h:commandButton actionListener="#{inicioControlador.notransaccionalREQUIRED()}"  value="NT_REQUIRED" />
+                    <h:commandButton actionListener="#{inicioControlador.notransaccionalREQUIRES_NEW()}" value="NT_REQUIRES_NEW" />
+                    <h:commandButton actionListener="#{inicioControlador.notransaccionalSUPPORTS()}" value="NT_SUPPORTS" />
+                    <h:commandButton actionListener="#{inicioControlador.notransaccionalMANDATORY()}" value="NT_MANDATORY" />
+                    <h:commandButton actionListener="#{inicioControlador.notransaccionalNOT_SUPPORTED()}" value="NT_NOT_SUPORTED" />
+                    <h:commandButton actionListener="#{inicioControlador.notransaccionalNEVER()}" value="NT_NEVER" />
+
+                    <hr></hr>
+                    
+                    <h:commandButton actionListener="#{inicioControlador.transaccionalREQUIRED()}"  value="REQUIRED" />
+                    <h:commandButton actionListener="#{inicioControlador.transaccionalREQUIRES_NEW()}" value="REQUIRES_NEW" />
+                    <h:commandButton actionListener="#{inicioControlador.transaccionalSUPPORTS()}" value="SUPPORTS" />
+                    <h:commandButton actionListener="#{inicioControlador.transaccionalMANDATORY()}" value="MANDATORY" />
+                    <h:commandButton actionListener="#{inicioControlador.transaccionalNOT_SUPPORTED()}" value="NOT_SUPORTED" />
+                    <h:commandButton actionListener="#{inicioControlador.transaccionalNEVER()}" value="NEVER" />
+                    
+                    
+                </h:panelGrid>
+            </p:panel>
+
+
+
+        </h:form>
+    </h:body>
+</html>
+
